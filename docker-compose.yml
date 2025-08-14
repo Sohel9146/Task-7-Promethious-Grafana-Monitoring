@@ -1,0 +1,47 @@
+version: '3.8' # Docker Compose file version
+
+services:
+  prometheus:
+    image: prom/prometheus # Official Prometheus image
+    container_name: prometheus # Container name
+    ports:
+      - "9090:9090" # Expose Prometheus UI on host port 9090
+    volumes:
+      - ./prometheus.yml:/etc/prometheus/prometheus.yml # Mount Prometheus config file from local machine
+    restart: unless-stopped # Automatically restart unless manually stopped
+
+  grafana:
+    image: grafana/grafana # Official Grafana image
+    container_name: grafana # Container name
+    ports:
+      - "3000:3000" # Grafana UI accessible on port 3000
+    volumes:
+      - grafana-data:/var/lib/grafana # Persistent Grafana data storage
+    restart: unless-stopped # Restart policy
+
+  node-exporter:
+    image: prom/node-exporter # Exports system metrics for Prometheus
+    container_name: node-exporter
+    ports:
+      - "9100:9100" # Node Exporter metrics endpoint
+    pid: host # Share host PID namespace to access system processes
+    restart: unless-stopped
+    command:
+      - '--path.rootfs=/host' # Set the root filesystem path for metrics
+    volumes:
+      - '/:/host:ro,rslave' # Mount root filesystem (read-only) for monitoring
+
+  cadvisor:
+    image: gcr.io/cadvisor/cadvisor:latest # cAdvisor for container-level metrics
+    container_name: cadvisor
+    ports:
+      - "8085:8080" # Expose cAdvisor UI on port 8085
+    restart: unless-stopped
+    volumes:
+      - /:/rootfs:ro # Mount root filesystem (read-only)
+      - /var/run:/var/run:ro # Access Docker socket & runtime data
+      - /sys:/sys:ro # Access system info
+      - /var/lib/docker/:/var/lib/docker:ro # Access Docker container data
+
+volumes:
+  grafana-data: # Named volume for persistent Grafana storage

@@ -1,0 +1,15 @@
+global:
+  scrape_interval: 15s # How often Prometheus scrapes targets (every 15 seconds)
+
+scrape_configs:
+  - job_name: 'prometheus' # Job to scrape Prometheus's own metrics
+    static_configs:
+      - targets: ['prometheus:9090'] # Prometheus itself
+
+  - job_name: 'node_exporter' # Job for node-exporter metrics
+    static_configs:
+      - targets: ['node-exporter:9100'] # Node Exporter container
+
+  - job_name: 'cadvisor' # Job for cAdvisor container metrics
+    static_configs:
+      - targets: ['cadvisor:8080'] # cAdvisor container
