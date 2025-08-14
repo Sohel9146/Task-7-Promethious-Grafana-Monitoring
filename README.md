@@ -18,7 +18,7 @@ A complete and professional Grafana setup for monitoring CPU, Memory, Disk, Netw
 ## 📂 Folder Structure
 
 ```bash
-Grafana-Dashboards/
+Task-7-Promethious-Grafana-Monitoring/
 │
 ├── screenshots/               # Dashboard screenshots
 │   ├── 1 - Prometheus Targets Page
@@ -36,26 +36,35 @@ Grafana-Dashboards/
 
 ---
 
-## 🖼 Dashboard Previews
+## 🖼 Screenshot Previews
 
 
 | -------------- | ------------ | -------------- | ---------- |
+**1 - Prometheus Targets Page**
 ![1 - Prometheus Targets Page](screenshots/1%20-%20Prometheus%20Targets%20Page.png) 
 | -------------- | ------------ | -------------- | ---------- |
+**2 - Grafana – Node Exporter Full Dashboard (ID 1860) Overview**
 ![2 - Grafana – Node Exporter Full Dashboard (ID 1860) Overview](screenshots/2%20-%20Grafana%20–%20Node%20Exporter%20Full%20Dashboard%20(ID%201860)%20Overview.png) 
 | -------------- | ------------ | -------------- | ---------- |
+**3 - Grafana – CPU & Memory Panels**
 ![3 - Grafana – CPU & Memory Panels](screenshots/3%20-%20Grafana%20–%20CPU%20&%20Memory%20Panels.png) 
 | -------------- | ------------ | -------------- | ---------- |
+**4.1 - Grafana – Storage-Disk**
 ![4.1 - Grafana – Storage-Disk](screenshots/4.1%20-%20Grafana%20–%20Storage-Disk%20.png) 
 | -------------- | ------------ | -------------- | ---------- |
+**4.2 - Grafana – Storage-Disk**
 ![4.2 - Grafana – Storage-Disk](screenshots/4.2%20-%20Grafana%20–%20Storage-Disk.png) 
 | -------------- | ------------ | -------------- | ---------- |
+**5 - Grafana – File-Disk**
 ![5 - Grafana – File-Disk ](screenshots/5%20-%20Grafana%20–%20File-Disk%20.png) 
 | -------------- | ------------ | -------------- | ---------- |
+**6.1 - Network Panel**
 ![6.1 - Network Panel](screenshots/6.1%20-%20Network%20Panel.png) 
 | -------------- | ------------ | -------------- | ---------- |
+**6.2 - Network Panel**
 ![6.2 - Network Panel](screenshots/6.2%20-%20Network%20Panel.png) 
 | -------------- | ------------ | -------------- | ---------- |
+**7 - Docker Containers Panel**
 ![7 - Docker Containers Panel](screenshots/7%20-%20Docker%20Containers%20Panel%20.jpeg) 
 | -------------- | ------------ | -------------- | ---------- |
 
