@@ -108,7 +108,7 @@ By completing this setup, you will:
 
 ## ✍️ Author
 
-**Sohel**  
+**Shaikh Sohel**  
 💼 DevOps & Monitoring Enthusiast  
 🔗 [GitHub Profile](https://github.com/Sohel9146)  
 📧 suhailshaikh7866@gmail.com  
